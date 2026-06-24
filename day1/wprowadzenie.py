@@ -79,3 +79,31 @@ print(bool("radek"))  # True
 
 print(bool(""))  # False
 print(bool("0"))  # True
+
+# kolekcje
+# mogą przechowywwac wiele elemntów - róznego typu na raz
+
+# lista - zachowuje kolejność przy dodawaniu elementów, mutowalna
+imiona = ["Jan", "Piotr", "Anna", "Nadia", "Michał"]
+print(imiona)
+print(type(imiona))  # <class 'list'>
+
+# ['Jan', 'Piotr', 'Anna', 'Nadia', 'Michał']
+#   0       1         2        3        4
+#   -5      -4        -3       -2         -1
+print(imiona[1])  # Piotr
+print(imiona[-1])  # Michał
+
+print(imiona[-2])
+
+# slicowanie - fragment listy
+print(imiona[2:4])  # ['Anna', 'Nadia'] z prawej niewłącznie
+print(imiona[1:])  # włacznie z ostatnim, ['Piotr', 'Anna', 'Nadia', 'Michał']
+
+print(imiona[2:7])  # ['Anna', 'Nadia', 'Michał']
+
+print(imiona[10:34])  # []
+# imiona[10] # IndexError: list index out of range
+
+print(imiona[-2:0])  # [3:0]
+print(imiona[0:-2])  # [0:3] -> ['Jan', 'Piotr', 'Anna']
