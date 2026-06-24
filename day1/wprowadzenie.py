@@ -350,3 +350,23 @@ print(50 * "-")
 while licznik < 10:
     licznik += 1
     print("Licznik dane 2")
+
+przekaski = ['hotdog', 'pizza', 'hamburger', 'frytki']
+prompt = "Wybierz swoją przekąskę: "
+
+# while True:
+#     choice = input(prompt.strip())  # strip() - usunięcie białych znaków
+#
+#     if choice in przekaski:
+#         break
+#     print('Nie ma')
+# # Wybierz swoją przekąskę:zupa
+# # Nie ma
+# # Wybierz swoją przekąskę:frytki
+# # Nie ma
+# # Wybierz swoją przekąskę:pizza
+
+# walrus operator, operator morsa
+# :=
+while (choice := input(prompt)) not in przekaski:
+    print("Nie ma")
