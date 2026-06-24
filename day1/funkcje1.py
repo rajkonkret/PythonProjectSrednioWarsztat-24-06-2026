@@ -75,3 +75,16 @@ def mnozenie3(a: int, b: int) -> Tuple[int, int, int]:
 
 a, b, wynik = mnozenie3("a", 9)
 print(f"{a} * {b} = {wynik}")  # a * 9 = aaaaaaaaa
+
+# narzedzie do skanowania kodu
+# mypy, pyright
+# pip install mypy
+# cd .\day1\
+# VSC  -> Pylance
+
+# (.venv) PS C:\Users\CSComarch\PycharmProjects\PythonProject\day1> mypy .\funkcje1.py
+# funkcje1.py:15: error: Name "odejmij" already defined on line 8  [no-redef]
+# funkcje1.py:20: error: Too many arguments for "odejmij"  [call-arg]
+# funkcje1.py:76: error: Argument 1 to "mnozenie3" has incompatible type "str"; expected "int"  [arg-type]
+# Found 3 errors in 1 file (checked 1 source file)
+# (.venv) PS C:\Users\CSComarch\PycharmProjects\PythonProject\day1>
