@@ -368,5 +368,24 @@ prompt = "Wybierz swoją przekąskę: "
 
 # walrus operator, operator morsa
 # :=
-while (choice := input(prompt)) not in przekaski:
-    print("Nie ma")
+# while (choice := input(prompt)) not in przekaski:
+#     print("Nie ma")
+
+print(chr(223))  # ß
+print("\u1E9E")  # ß
+
+name1 = "GROSS"
+name2 = "groß"
+
+print(name1.lower() == name2.lower())  # False
+print(name1.upper() == name2.upper())  # True
+print(name1.casefold() == name2.casefold())  # True
+
+odp = "Radek"
+
+if odp == "Radek":
+    print("Radek")
+elif odp == "Tomek":
+    print("Tomek")
+else:
+    print("Ktoś inny")
