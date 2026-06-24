@@ -268,3 +268,10 @@ print(osoba.items())
 # dict_keys(['id', 'imie', 'rok', 'miasto'])
 # dict_values([89, 'Radek', 1976, 'Łódź'])
 # dict_items([('id', 89), ('imie', 'Radek'), ('rok', 1976), ('miasto', 'Łódź')])
+
+lista = [1, 2, 3, 4, 4, 7, 7, 6, 5, 1, 3, 4, 5, 6, 7, "A"]
+
+print(dict.fromkeys(lista))
+# {1: None, 2: None, 3: None, 4: None, 7: None, 6: None, 5: None, 'A': None}
+print(list(dict.fromkeys(lista)))  # [1, 2, 3, 4, 7, 6, 5, 'A']
+
