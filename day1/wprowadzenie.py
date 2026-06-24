@@ -389,3 +389,19 @@ elif odp == "Tomek":
     print("Tomek")
 else:
     print("Ktoś inny")
+
+# od 3.10
+# match case
+
+dane = [1, 2, 3]
+# dane = "Radek"
+dane = {'nazwa': "Radek", "wiek": 56}
+match dane:
+    case [a, b, c]:
+        print(f"Lista z trzema elementami: {a=}, {b=}, {c=}")
+        # Lista z trzema elementami: a=1, b=2, c=3
+    case {'nazwa': n, "wiek": w}:
+        print(f"Słownik reprezentujący osobę: {n}, wiek {w}")
+    case _:
+        print("Błędne dane")
+# Słownik reprezentujący osobę: Radek, wiek 56
