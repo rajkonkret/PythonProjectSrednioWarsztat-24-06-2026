@@ -132,3 +132,50 @@ lista_p.append("Jan")
 # usunięcie z listy, pierwszy napotkany
 lista_p.remove("Jan")
 print(lista_p)  # ['Karol', 'Radek', 'Tomek', 'Anna', 'Jan']
+
+# pop() - usunięcie po indeksie
+# usunie ostani, zwraca usuniety
+
+# garbage collector
+
+del imiona[3]
+print(imiona)  # ['Jan', 'Piotr', 'Anna', 'Michał']
+
+del lista_p2  # usunięcie listy
+# print(lista_p2) # NameError: name 'lista_p2' is not defined. Did you mean: 'lista_p'?
+
+nowe_imie = imiona
+print(imiona)  # ['Jan', 'Piotr', 'Anna', 'Michał']
+print(nowe_imie)  # ['Jan', 'Piotr', 'Anna', 'Michał']
+
+print(id(imiona))  # 1601884180416
+print(id(nowe_imie))  # 1601884180416
+
+# kopia elementów listy
+nowa_lista = imiona.copy()
+print(id(nowa_lista))  # 2155757094592
+
+imiona.clear()
+print(imiona)  # []
+print(nowe_imie)  # []
+
+print(nowa_lista)  # ['Jan', 'Piotr', 'Anna', 'Michał']
+nowa_lista.append("Radek")
+
+nowe_imie.append("Radek")
+
+print(nowe_imie)
+print(nowa_lista)
+print(imiona)
+# ['Radek']
+# ['Jan', 'Piotr', 'Anna', 'Michał', 'Radek']
+# ['Radek']
+
+pimie = imiona[:]
+qimie = list(imiona)
+print(id(pimie))
+print(id(qimie))
+print(id(imiona))
+# 2047535348416
+# 2047572868096
+# 2047533174720
