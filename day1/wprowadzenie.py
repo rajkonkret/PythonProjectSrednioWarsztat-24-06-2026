@@ -179,3 +179,23 @@ print(id(imiona))
 # 2047535348416
 # 2047572868096
 # 2047533174720
+
+# tupla - krotka
+# kolekcja niemutowalna
+# tylko do odczyty
+# pozwala lepiej zarzadzac pamięcią
+
+miasto = "Kraków", "Lublin", "Płock", "Łódź"
+# miasto = ("Kraków", "Lublin", "Płock", "Łódź")
+print(type(miasto))  # <class 'tuple'>
+
+krotka_jedn = ("radek",)  # pep8 tak zaleca
+print(type(krotka_jedn))  # <class 'tuple'>
+
+print(miasto.index("Łódź"))  # index numer 3
+print(miasto.count("Łódź"))  # występuje 1 raz
+
+# del miasto[0] # TypeError: 'tuple' object doesn't support item deletion
+
+del miasto
+# print(miasto)  # NameError: name 'miasto' is not defined
