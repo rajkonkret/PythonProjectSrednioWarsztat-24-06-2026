@@ -275,3 +275,48 @@ print(dict.fromkeys(lista))
 # {1: None, 2: None, 3: None, 4: None, 7: None, 6: None, 5: None, 'A': None}
 print(list(dict.fromkeys(lista)))  # [1, 2, 3, 4, 7, 6, 5, 'A']
 
+# pętla for
+for i in range(5):
+    print(i)
+
+#
+for i in nowa_lista:
+    print(i)
+    # Jan
+    # Piotr
+    # Anna
+    # Michał
+    # Radek
+
+# 0 Radek -> 111 Radek
+
+imen = enumerate(nowa_lista, start=111)
+print(imen)  # <enumerate object at 0x000001B149EBD030>
+# for i in imen:
+#     print(i)
+# # (111, 'Jan')
+# # (112, 'Piotr')
+# # (113, 'Anna')
+# # (114, 'Michał')
+# # (115, 'Radek')
+#
+# dane = (115, 'Radek')
+# a = dane[0]
+# b = dane[1]
+#
+# a, b = (115, 'Radek')
+# print(a, b) # (115, 'Radek')
+# # 115 Radek
+
+print(40 * "-")
+for index, wartosc in imen:
+    print(f"index -> {index}, wartosc => {wartosc}")
+# ----------------------------------------
+# index -> 111, wartosc => Jan
+# index -> 112, wartosc => Piotr
+# index -> 113, wartosc => Anna
+# index -> 114, wartosc => Michał
+# index -> 115, wartosc => Radek
+
+print("index -> {}, wartosc => {}".format(index, wartosc))  # index -> 115, wartosc => Radek
+print("index ->", index, "wartosc =>", wartosc)  # index -> 115 wartosc => Radek
