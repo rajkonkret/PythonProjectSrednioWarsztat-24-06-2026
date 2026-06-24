@@ -320,3 +320,33 @@ for index, wartosc in imen:
 
 print("index -> {}, wartosc => {}".format(index, wartosc))  # index -> 115, wartosc => Radek
 print("index ->", index, "wartosc =>", wartosc)  # index -> 115 wartosc => Radek
+# sep
+# string inserted between values, default a space.
+# end
+# string appended after the last value, default a newline.
+# file
+# a file-like object (stream); defaults to the current sys.stdout.
+# flush
+# whether to forcibly flush the stream.
+
+# dedykowany do logów
+# lazy
+print("a: %i, b: %s" % (index, wartosc))  # a: 115, b: Radek
+# print("a: %s, b: %i" % (index, wartosc))  #TypeError: %i format: a real number is required, not str
+
+print(50 * "-")
+# pętla while
+licznik = 0
+while True:
+    print("Dane")
+    licznik += 1
+    if licznik > 10:
+        break
+
+print(licznik)
+
+licznik = 0
+print(50 * "-")
+while licznik < 10:
+    licznik += 1
+    print("Licznik dane 2")
