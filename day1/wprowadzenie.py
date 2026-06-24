@@ -112,3 +112,23 @@ imiona_p = imiona[::2]  # [start:stop:krok]
 print(imiona_p)  # ['Jan', 'Anna', 'Michał']
 
 print(imiona[::-1])  # ['Michał', 'Nadia', 'Anna', 'Piotr', 'Jan']
+
+# pusta lista
+lista_p = list()
+lista_p2 = []
+print(lista_p2)  # []
+
+lista_p.append("Karol")
+lista_p.append("Radek")
+lista_p.append("Tomek")
+lista_p.append("Anna")
+print(lista_p)  # ['Karol', 'Radek', 'Tomek', 'Anna']
+
+lista_p.insert(1, "Jan")  # na wskazanym indeksie
+print(lista_p)  # ['Karol', 'Jan', 'Radek', 'Tomek', 'Anna']
+
+lista_p.append("Jan")
+
+# usunięcie z listy, pierwszy napotkany
+lista_p.remove("Jan")
+print(lista_p)  # ['Karol', 'Radek', 'Tomek', 'Anna', 'Jan']
