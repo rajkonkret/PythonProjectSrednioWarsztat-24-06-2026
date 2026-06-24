@@ -199,3 +199,72 @@ print(miasto.count("Łódź"))  # występuje 1 raz
 
 del miasto
 # print(miasto)  # NameError: name 'miasto' is not defined
+
+# zbiór, set
+# nie przechowują duplikatów
+# nie zachowuje kolejności (brak indeksu)
+# hashowane
+
+drzewa = {'jodłą', 'buk', "świerk", 'dąb', 'klon'}
+print(drzewa)  # {'dąb', 'klon', 'świerk', 'jodłą', 'buk'}
+print(type(drzewa))  # <class 'set'>
+
+drzewa.add('osika')
+drzewa.add('osika')
+drzewa.add('osika')
+drzewa.add('osika')
+drzewa.add('osika')
+print(drzewa)
+# {'osika', 'świerk', 'klon', 'buk', 'jodłą', 'dąb'}
+
+# pusty zbiór
+pusty_zbior = set()  # tylko i wyłacznie za pomocą set()
+print(pusty_zbior)  # set()
+
+lista = [1, 2, 3, 4, 4, 7, 7, 6, 5, 1, 3, 4, 5, 6, 7, "A"]
+zbior = set(lista)
+print(zbior)  # {1, 2, 3, 4, 5, 6, 7, 'A'} bez zachowania kolejnosci
+
+# słownik - para klucz:wartosc
+# {'name': 'John', 'age': 30, "car": None}
+# odpowiednik jsona
+
+pusty_slownik = {}
+print(type(pusty_slownik))  # <class 'dict'>
+print(pusty_slownik)  # {}
+
+pusty_slownik = dict()
+print(type(pusty_slownik))
+print(pusty_slownik)
+# <class 'dict'>
+# {}
+
+osoba = {
+    "id": 89,
+    'imie': "Tadeusz",
+    "rok": 1976,
+    "miasto": "Łódź"
+}
+
+print(osoba)
+# {'id': 89, 'imie': 'Tadeusz', 'rok': 1976, 'miasto': 'Łódź'}
+print(type(osoba))  # <class 'dict'>
+
+print(osoba['miasto'])  # Łódź
+# print(osoba['Miasto'])  # KeyError: 'Miasto'
+
+print(osoba.get("miasto"))
+print(osoba.get("Miasto"))  # None
+print(osoba.get("Miasto", "default"))  # default
+
+osoba['imie'] = "Radek"  # nadpisze
+print(osoba)
+# {'id': 89, 'imie': 'Radek', 'rok': 1976, 'miasto': 'Łódź'}
+
+print(osoba.keys())
+print(osoba.values())
+print(osoba.items())
+
+# dict_keys(['id', 'imie', 'rok', 'miasto'])
+# dict_values([89, 'Radek', 1976, 'Łódź'])
+# dict_items([('id', 89), ('imie', 'Radek'), ('rok', 1976), ('miasto', 'Łódź')])
