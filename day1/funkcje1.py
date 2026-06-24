@@ -1,4 +1,6 @@
 # funkcja - fragment kodu, który mozna wywołąc wielokrotnie
+from typing import Tuple
+
 print()
 
 
@@ -55,11 +57,21 @@ print(mnozenie(5, 6) + mnozenie(7, 89))  # 653
 
 # funkcja zwracająca więcej niż jedną wartość
 def mnozenie2(a, b):
-    return a, b, a * b
+    return a, b, a * b  # (7 ,9, 63)
 
 
 print(mnozenie2(5, 6))  # (5, 6, 30)
 print(mnozenie2("a", 9))  # ('a', 9, 'aaaaaaaaa')
 
+# rozpakowanie krotki
 a, b, wynik = mnozenie2(7, 9)
 print(f"{a} * {b} = {wynik}")  # 7 * 9 = 63
+
+
+# podpowiedzi typów
+def mnozenie3(a: int, b: int) -> Tuple[int, int, int]:
+    return a, b, a * b
+
+
+a, b, wynik = mnozenie3("a", 9)
+print(f"{a} * {b} = {wynik}")  # a * 9 = aaaaaaaaa
