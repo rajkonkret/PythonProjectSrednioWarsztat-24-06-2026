@@ -107,3 +107,8 @@ print(imiona[10:34])  # []
 
 print(imiona[-2:0])  # [3:0]
 print(imiona[0:-2])  # [0:3] -> ['Jan', 'Piotr', 'Anna']
+
+imiona_p = imiona[::2]  # [start:stop:krok]
+print(imiona_p)  # ['Jan', 'Anna', 'Michał']
+
+print(imiona[::-1])  # ['Michał', 'Nadia', 'Anna', 'Piotr', 'Jan']
