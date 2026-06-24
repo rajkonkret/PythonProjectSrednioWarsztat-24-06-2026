@@ -52,6 +52,7 @@ Zamówienie {numer_zamowienia}:
 
     return zmien_status
 
+
 zamowinie_1001 = obsluga_zamowienia(1001)
 
 zamowinie_1001("opłacone")
