@@ -1,7 +1,7 @@
 # lambda - skrócony zapis funkcji
 # lambda zawsze zwraca wynik
 # funkcja anonimowa - mie ma nazwy, wykonanie w miejscu deklaracji
-from functools import reduce
+from functools import reduce, lru_cache
 
 
 def oblicz_rabat(cena, procent):
@@ -151,3 +151,34 @@ print(wynik)  # 60
 
 # reduce(lambda x,y: x + y, []) # TypeError: reduce() of empty iterable with no initial value
 print(reduce(lambda x, y: x + y, [], 0))  # 0
+
+
+# lru_cache()
+
+@lru_cache(maxsize=100)
+def oblicz_koszt_wysylki(kraj, waga):
+    print(f"Obliczam koszt dla: {kraj}, {waga} kg")
+
+    ceny_bazowe = {
+        "Polska": 15,
+        "Niemcy": 35,
+        "Francja": 45,
+    }
+
+    cena_bazowa = ceny_bazowe.get(kraj, 70)
+
+    return cena_bazowa + waga * 2
+
+
+print(oblicz_koszt_wysylki("Polska", 5))
+# Obliczam koszt dla: Polska, 5 kg
+# 25
+print(oblicz_koszt_wysylki("Polska", 5))
+# 25  - wyciagnięte z cache
+
+print(oblicz_koszt_wysylki.cache_info())
+# CacheInfo(hits=1, misses=1, maxsize=100, currsize=1)
+
+oblicz_koszt_wysylki.cache_clear()
+print(oblicz_koszt_wysylki.cache_info())
+# CacheInfo(hits=0, misses=0, maxsize=100, currsize=0)
