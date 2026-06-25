@@ -1,6 +1,7 @@
 # lambda - skrócony zapis funkcji
 # lambda zawsze zwraca wynik
 # funkcja anonimowa - mie ma nazwy, wykonanie w miejscu deklaracji
+from functools import reduce
 
 
 def oblicz_rabat(cena, procent):
@@ -141,3 +142,5 @@ print(d_zip(r0))
 print(d_zip(r1))
 
 print(r0)  # {'miasto': 'Kielce', 'ZIP': '00-000'}
+
+reduce()
