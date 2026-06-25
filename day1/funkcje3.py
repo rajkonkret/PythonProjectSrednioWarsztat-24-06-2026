@@ -78,3 +78,14 @@ umiarkowane = list(
 )
 print(umiarkowane)  # [15, 22]
 # ctrl alt l
+
+# wybrac ceny wieksze niz 100, obnizyc o 10%
+
+ceny = [150, 250, 80, 75]
+
+wiekszy_100 = list(
+    filter(lambda cena: cena > 100, ceny)
+)
+print(wiekszy_100) # [150, 250]
+
+
