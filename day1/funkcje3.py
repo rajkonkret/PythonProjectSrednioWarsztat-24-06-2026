@@ -86,6 +86,23 @@ ceny = [150, 250, 80, 75]
 wiekszy_100 = list(
     filter(lambda cena: cena > 100, ceny)
 )
-print(wiekszy_100) # [150, 250]
+print(wiekszy_100)  # [150, 250]
 
+rabat_100 = list(
+    map(lambda cena: cena * 0.9, wiekszy_100)
+)
 
+print(list(map(lambda cena: cena * 0.9, filter(lambda cena: cena > 100, ceny))))  # [135.0, 225.0]
+
+print(rabat_100)  # [135.0, 225.0]
+
+# max()
+najwieksza = max(ceny)
+print(najwieksza)  # 250
+
+pracownicy = [
+    {'imie': "Anna", "pensja": 7500, "wiek": 33},
+    {'imie': "Radek", "pensja": 17500, "wiek": 41},
+    {'imie': "Tomek", "pensja": 6500, "wiek": 29},
+    {'imie': "Marek", "pensja": 12000, "wiek": 35},
+]
