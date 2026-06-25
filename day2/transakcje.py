@@ -7,3 +7,8 @@ transactions = [
     {'id': 6, "type": "expense", "amount": 400, "currency": "EUR"},
     {'id': 7, "type": "income", "amount": 100, "currency": "EUR"},
 ]
+
+# filter()
+# map()
+# reduce()
+
