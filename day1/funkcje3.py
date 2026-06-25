@@ -1,6 +1,8 @@
 # lambda - skrócony zapis funkcji
 # lambda zawsze zwraca wynik
 # funkcja anonimowa - mie ma nazwy, wykonanie w miejscu deklaracji
+
+
 def oblicz_rabat(cena, procent):
     return cena * procent / 100
 
@@ -106,3 +108,36 @@ pracownicy = [
     {'imie': "Tomek", "pensja": 6500, "wiek": 29},
     {'imie': "Marek", "pensja": 12000, "wiek": 35},
 ]
+
+najlepiej_oplacony = max(
+    pracownicy,
+    key=lambda osoba: osoba['pensja']
+)
+
+print(najlepiej_oplacony)  # {'imie': 'Radek', 'pensja': 17500, 'wiek': 41}
+
+# min()
+najmlodszy = min(
+    pracownicy,
+    key=lambda osoba: osoba['wiek']
+)
+
+print(najmlodszy)  # {'imie': 'Tomek', 'pensja': 6500, 'wiek': 29}
+# any(), all()
+
+# sorted()
+posortowani = sorted(
+    pracownicy,
+    key=lambda osoba: osoba['wiek']
+)
+
+print(posortowani)
+
+r0 = {'miasto': "Kielce"}
+r1 = {'miasto': "Kielce", "ZIP": "25-900"}
+
+d_zip = lambda row: row.setdefault("ZIP", "00-000")
+print(d_zip(r0))
+print(d_zip(r1))
+
+print(r0)  # {'miasto': 'Kielce', 'ZIP': '00-000'}
