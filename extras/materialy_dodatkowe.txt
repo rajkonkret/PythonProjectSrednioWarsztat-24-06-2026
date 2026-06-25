@@ -118,3 +118,6 @@ spam /= 1    spam = spam / 1
 spam %= 1    spam = spam % 1
 
 https://fiszki-python.cytr.us/
+https://www.w3schools.com/python/
+https://www.hackerrank.com/domains/python?filters%5Bstatus%5D%5B%5D=unsolved&filters%5Bstatus%5D%5B%5D=solved&badge_type=python
+https://pl.altapps.net/soft/hackerrank-com
