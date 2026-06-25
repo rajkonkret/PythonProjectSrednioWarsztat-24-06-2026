@@ -68,8 +68,12 @@ def test_transactions_processing():
 
 
 # pip install pytest
+if __name__ == '__main__':
 
-print(process_transactions(transactions, "expense", "EUR"))  # 400
+    print(process_transactions(transactions, "expense", "EUR"))  # 400
+
+
+
 # (.venv) PS C:\Users\CSComarch\PycharmProjects\PythonProject\day2> pytest -v .\transakcje.py
 # ======================================================================= test session starts ========================================================================
 # platform win32 -- Python 3.14.6, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\CSComarch\PycharmProjects\PythonProject\.venv\Scripts\python.exe
