@@ -143,4 +143,11 @@ print(d_zip(r1))
 
 print(r0)  # {'miasto': 'Kielce', 'ZIP': '00-000'}
 
-reduce()
+# reduce()
+#  reduce(lambda x, y: x+y, [1, 2, 3, 4, 5]) calculates ((((1+2)+3)+4)+5)
+liczby = [1, 3, 4, 5]
+wynik = reduce(lambda x, y: x * y, liczby)
+print(wynik)  # 60
+
+# reduce(lambda x,y: x + y, []) # TypeError: reduce() of empty iterable with no initial value
+print(reduce(lambda x, y: x + y, [], 0))  # 0
