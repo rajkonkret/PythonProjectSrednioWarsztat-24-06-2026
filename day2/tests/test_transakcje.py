@@ -1,4 +1,6 @@
 # assert - asercja - test
+import pytest
+
 x = 5
 assert x == 5
 
@@ -41,6 +43,31 @@ def test_filter_transactions_income():
 
     assert tr.filter_transactions(tr.transactions, "income") == expected_list
 
+
 # tests/test_transakcje.py::test_map_transactions_usd PASSED                                                                                                    [ 33%]
 # tests/test_transakcje.py::test_reduce_transactions PASSED                                                                                                     [ 66%]
 # tests/test_transakcje.py::test_filter_transactions_income PASSED                                                                                              [100%]
+
+
+# testy parametryzowany
+@pytest.mark.parametrize(
+    "kind,currency,expected",
+    [
+        ("income", "USD", 1000 + 500 + 700),
+        ("income", "EUR", 100),
+        ("expense", "USD", 200 + 300),
+        ("expense", "EUR", 400),
+    ]
+)
+def test_process_transactions_param(kind, currency, expected):
+    assert tr.process_transactions(tr.transactions, kind, currency) == expected
+
+# collected 7 items
+#
+# tests/test_transakcje.py::test_map_transactions_usd PASSED                                                                                                    [ 14%]
+# tests/test_transakcje.py::test_reduce_transactions PASSED                                                                                                     [ 28%]
+# tests/test_transakcje.py::test_filter_transactions_income PASSED                                                                                              [ 42%]
+# tests/test_transakcje.py::test_process_transactions_param[income-USD-2200] PASSED                                                                             [ 57%]
+# tests/test_transakcje.py::test_process_transactions_param[income-EUR-100] PASSED                                                                              [ 71%]
+# tests/test_transakcje.py::test_process_transactions_param[expense-USD-500] PASSED                                                                             [ 85%]
+# tests/test_transakcje.py::test_process_transactions_param[expense-EUR-400] PASSED                                                                             [100%]

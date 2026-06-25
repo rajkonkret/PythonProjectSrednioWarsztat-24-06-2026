@@ -69,10 +69,7 @@ def test_transactions_processing():
 
 # pip install pytest
 if __name__ == '__main__':
-
     print(process_transactions(transactions, "expense", "EUR"))  # 400
-
-
 
 # (.venv) PS C:\Users\CSComarch\PycharmProjects\PythonProject\day2> pytest -v .\transakcje.py
 # ======================================================================= test session starts ========================================================================
