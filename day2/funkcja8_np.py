@@ -14,3 +14,6 @@ tracemalloc.stop()
 
 print(f"Current memory usage: {current / 1024 ** 2} MB")
 print(f"Peak memory usage: {peak / 1024 ** 2} MB")
+
+# Current memory usage: 762.924072265625 MB
+# Peak memory usage: 762.924072265625 MB
