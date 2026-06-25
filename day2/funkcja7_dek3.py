@@ -53,7 +53,14 @@ def add_zip():
     # (1, 3) -> a, b -> a + b
 
 
+@measure_time
+def add_np():
+    result = array1 + array2  # broadcasting
+    return "OK np"
+
+
 my_time()  # Czas wykonania funkcji: my_time: 2.0002292999997735
 add_with_for()  # Czas wykonania funkcji: add_with_for: 1.8390606000029948
 add_lc()  # Czas wykonania funkcji: add_lc: 1.3834720999875572
 add_zip()  # Czas wykonania funkcji: add_zip: 1.2276006000174675
+add_np()  # Czas wykonania funkcji: add_np: 0.0433445000089705
