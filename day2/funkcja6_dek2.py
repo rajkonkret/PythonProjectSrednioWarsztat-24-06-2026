@@ -32,10 +32,11 @@ def czerwony_bold(func):
     def wrapper(*args, **kwargs):
         wynik = func(*args, **kwargs)
 
-        print(
-            Style.BRIGHT + Fore.RED + str(wynik) + Style.RESET_ALL
-        )
-        return wynik
+        # print(
+        #     Style.BRIGHT + Fore.RED + str(wynik) + Style.RESET_ALL
+        # )
+        # return wynik
+        return Style.BRIGHT + Fore.RED + str(wynik) + Style.RESET_ALL
 
     return wrapper
 
