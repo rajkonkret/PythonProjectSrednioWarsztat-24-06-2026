@@ -17,8 +17,8 @@ class BankAccount:
         else:
             print("Invalid deposit amount")
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     account = BankAccount("Radek", 2500)
     # print(account.__balance) # AttributeError: 'BankAccount' object has no attribute '__balance'. Did you mean: 'get_balance'?
     print(account.owner)
