@@ -6,6 +6,7 @@
 # metody inicjalizująca __init__ - konstruktor
 # hermetyzacja, dziedziczenie, polimorfizm, abstrakacja
 import math
+from os import name
 
 
 # PascalCase, UpperCamelCase
@@ -46,9 +47,13 @@ class MyFirstClass:
         """
         return math.hypot(self.x - other.x, self.y - other.y)
 
-    # metoda opisowa
+    # metoda opisowa - bezpośredni print(), str()
     def __str__(self):
         return f"{self.x, self.y}"
+
+    # reprezentacja obiektu dla programisty
+    def __repr__(self):
+        return f"{self.__class__.__name__} {self.x, self.y}"
 
 
 ob = MyFirstClass()
@@ -76,3 +81,20 @@ point2 = MyFirstClass(90, 76)
 
 print(point1.calculate(point2))
 # 117.79643458101778
+
+point3 = MyFirstClass(87, 12)
+point4 = MyFirstClass(43, 233)
+
+print(point3)
+print(point4)
+# (87, 12)
+# (43, 233)
+
+lista = [point1, point2, point3, point4]
+
+print(lista)
+# po dopisaniu __repr__
+# [MyFirstClass (0, 0),
+# MyFirstClass (90, 76),
+# MyFirstClass (87, 12),
+# MyFirstClass (43, 233)]
