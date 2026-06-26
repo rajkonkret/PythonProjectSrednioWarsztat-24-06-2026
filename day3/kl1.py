@@ -32,6 +32,9 @@ class MyFirstClass:
         self.x = x
         self.y = y
 
+    def reset(self):
+        self.move(0, 0)
+
     # metoda opisowa
     def __str__(self):
         return f"{self.x, self.y}"
@@ -52,3 +55,7 @@ print(point1)  # (5, 9)
 
 point1.move(8, 90)
 print(point1)  # (8, 90)
+
+# reset()
+point1.reset()
+print(point1)  # (0, 0)
