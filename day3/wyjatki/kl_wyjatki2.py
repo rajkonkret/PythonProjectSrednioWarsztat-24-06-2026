@@ -25,3 +25,9 @@ def my_function(x: int, y: int) -> float:
         raise MyValueError("Y cannot be a zero")
 
     return x / y
+
+
+print(my_function(3, 5))  # 0.6
+# print(my_function(2, 5.9))  # MyTypeError: Y must be integer
+# print(my_function(2.9, 9))  # MyTypeError: Y must be integer
+# print(my_function(5, 0))  # MyValueError: Y cannot be a zero
