@@ -41,4 +41,22 @@ print(Contact.x)  # TEST
 
 c2.a = "Radek"
 print(c2.a)  # Radek
+
+
 # __slots__
+
+
+class Suplier(Contact):
+    """
+    Klasa dziedziczy po kalsie Contact
+    """
+
+    def order(self, order):
+        print(f"{order} zamówione od {self.name}")
+
+
+sup1 = Suplier("Marek", "marek@wp.pl")
+print(sup1)  # Marek marek@wp.pl
+print(sup1.all_contacts)
+
+sup1.order("kawa")  # kawa zamówione od Marek
