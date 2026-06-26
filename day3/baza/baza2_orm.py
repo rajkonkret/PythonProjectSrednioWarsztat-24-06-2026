@@ -58,3 +58,7 @@ for p in persons:
 # 3
 # Radek
 # 4
+
+# pgAdmin, dbeaver, Toad, sqldeveloper
+# tablePlus, Heidi
+# DbBrowser for sqlite
