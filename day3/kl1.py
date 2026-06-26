@@ -5,6 +5,8 @@
 # cechy (zmienne)
 # metody inicjalizująca __init__ - konstruktor
 # hermetyzacja, dziedziczenie, polimorfizm, abstrakacja
+import math
+
 
 # PascalCase, UpperCamelCase
 class MyFirstClass:
@@ -35,6 +37,15 @@ class MyFirstClass:
     def reset(self):
         self.move(0, 0)
 
+    def calculate(self, other: "MyFirstClass") -> float:
+        """
+        For a two dimensional point (x, y), this is equivalent to computing the hypotenuse
+         of a right triangle using the Pythagorean theorem, sqrt(x*x + y*y).
+        :param other:
+        :return:
+        """
+        return math.hypot(self.x - other.x, self.y - other.y)
+
     # metoda opisowa
     def __str__(self):
         return f"{self.x, self.y}"
@@ -59,3 +70,9 @@ print(point1)  # (8, 90)
 # reset()
 point1.reset()
 print(point1)  # (0, 0)
+
+# calculate() odległość euklidesowa
+point2 = MyFirstClass(90, 76)
+
+print(point1.calculate(point2))
+# 117.79643458101778
