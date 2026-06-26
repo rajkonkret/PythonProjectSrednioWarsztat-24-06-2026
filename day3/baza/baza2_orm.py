@@ -11,6 +11,8 @@ from sqlalchemy.orm import relationship, sessionmaker, declarative_base
 # echo=True - podgląd logów bazy danych
 engine = create_engine('sqlite:///moja_baza_pytanie.db', echo=True)
 Base = declarative_base()
+
+
 # CREATE TABLE person (
 # 	id INTEGER NOT NULL,
 # 	name VARCHAR,
