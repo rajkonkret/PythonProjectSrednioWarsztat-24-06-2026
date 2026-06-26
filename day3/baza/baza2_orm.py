@@ -1,0 +1,28 @@
+# Mapowanie obiektowo-relacyjne (ang. Object-Relational Mapping – ORM)
+# – sposób odwzorowania obiektowej architektury systemu informatycznego na bazę danych (lub inny element systemu)
+# o relacyjnym charakterze.
+
+# orm w pythonie -> peewe, sqlalchemy
+# pip install sqlalchemy
+
+from sqlalchemy import Column, Integer, String, ForeignKey, create_engine
+from sqlalchemy.orm import relationship, sessionmaker, declarative_base
+
+# echo=True - podgląd logów bazy danych
+engine = create_engine('sqlite:///moja_baza.db', echo=True)
+Base = declarative_base()
+
+
+# model, encja - klasa odwzorowująca tabele w bazie danych
+class Person(Base):
+    __tablename__ = "person"
+    id = Column(Integer, primary_key=True)
+    name = Column(String)
+    age = Column(String)
+
+    def __repr__(self):
+        return f"{self.name}"
+
+
+# tworzenie tabel
+Base.metadata.create_all(engine)
