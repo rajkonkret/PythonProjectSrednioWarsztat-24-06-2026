@@ -90,6 +90,8 @@ for i in osoba:
     print(i)
     print(i.name)
     print(i.email)
+
+
 # --------------------------------------------------
 # Radek raddek@wp.pl
 # Radek
@@ -104,4 +106,39 @@ class Friend(Suplier):
     """
 
     def __init__(self, name, email, phone="000000000"):
-        pass
+        super().__init__(name, email)  # super() klasa nadrzędna, usi byc wywołany __init__
+        self.phone = phone
+
+    def __repr__(self):
+        return f"{self.name} {self.email} +48{self.phone}"
+
+
+friend1 = Friend("Marrk", "maark@gov.pl")
+friend2 = Friend("Kamil", "Kamil_the_best@gov.pl", "500600700")
+
+print(friend1, friend2)
+# --------------------------------------------------
+# Radek raddek@wp.pl
+# Radek
+# raddek@wp.pl
+# Marrk maark@gov.pl +48000000000 Kamil Kamil_the_best@gov.pl +48500600700
+
+print(Contact.all_contacts)
+
+from pprint import pprint
+
+pprint(Contact.all_contacts)
+# [Radek raddek@wp.pl,
+#  Tomek Tomek@wp.pl,
+#  MArek MArek@wp.pl,
+#  Zenek Zenek@wp.pl,
+#  Marek marek@wp.pl,
+#  Marrk maark@gov.pl +48000000000,
+#  Kamil Kamil_the_best@gov.pl +48500600700]
+
+# kolejnosc rozwiązywania nazw
+pprint(Friend.__mro__)
+# (<class '__main__.Friend'>,
+#  <class '__main__.Suplier'>,
+#  <class '__main__.Contact'>,
+#  <class 'object'>)
