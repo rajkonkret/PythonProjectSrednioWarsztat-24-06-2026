@@ -35,3 +35,4 @@ async def measure_aiohttp():
 
 # uruchomienie funkcji asynchronicznej
 asyncio.run(measure_aiohttp())
+# Overall time for requests: 0.26698499999474734
