@@ -26,3 +26,11 @@ class Person(Base):
 
 # tworzenie tabel
 Base.metadata.create_all(engine)
+
+Session = sessionmaker(bind=engine)
+session = Session()
+
+person = Person(name="Radek", age="23")
+session.add(person)
+session.commit()
+# INSERT INTO person (name, age) VALUES (?, ?) ('Radek', '23')
